@@ -296,8 +296,105 @@ h1 {
     padding: 10px;
 }
 
-@media (orientation: portrait) {
-    .box{
-        width: 90vw;
+/* Mobile Styles */
+@media (max-width: 599px) {
+    .main {
+        height: auto; /* Allow the main section to be flexible */
+    }
+
+    .box {
+        height: auto; /* Allow the box to adjust its height */
+        width: 90vw; /* Make it wider for mobile */
+    }
+
+    .nav {
+        flex-direction: column; /* Stack nav items */
+        width: 100vw; /* Full width for navigation */
+    }
+
+    .con {
+        margin-top: 100px; /* Reduce margin for mobile */
+    }
+
+    .con div:first-child {
+        font-size: 32px; /* Reduce font size for heading */
+    }
+
+    .con div:nth-child(2) {
+        font-size: 18px; /* Reduce font size for subheading */
+    }
+
+    .con div:nth-child(3) {
+        font-size: 14px; /* Reduce font size for additional info */
+    }
+
+    .con div:nth-child(4) input {
+        width: 90%; /* Make input field responsive */
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .but {
+        width: 100%; /* Full width for buttons */
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .box1 {
+        flex-direction: column; /* Stack box1 contents vertically */
+        margin: 50px 0; /* Reduce margin */
+    }
+
+    .text1 {
+        font-size: 32px; /* Adjust text size for mobile */
+    }
+
+    .text2 {
+        font-size: 20px; /* Adjust text size for mobile */
+    }
+
+    .mail div:nth-child(1) {
+        font-size: 18px; /* Adjust font size for mobile */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 600px) and (max-width: 899px) {
+    .nav {
+        flex-direction: row; /* Align nav items in a row */
+        justify-content: space-between; /* Space them out */
+    }
+
+    .con {
+        margin-top: 150px; /* Adjust margin for tablet */
+    }
+
+    .box1 {
+        margin: 100px; /* Adjust margin for tablet */
+    }
+
+    .text1 {
+        font-size: 36px; /* Adjust text size for tablet */
+    }
+
+    .text2 {
+        font-size: 22px; /* Adjust text size for tablet */
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 900px) {
+    .main, .main2, .main3, .main4 {
+        padding: 50px; /* Consistent padding */
+    }
+
+    .text1 {
+        font-size: 48px; /* Base text size for desktop */
+    }
+
+    .text2 {
+        font-size: 24px; /* Base text size for desktop */
+    }
+
+    .link {
+        gap: 160px; /* Maintain gap for links */
     }
 }
